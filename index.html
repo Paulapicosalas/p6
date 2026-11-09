@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICA 6_DISPLAY FLEX</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #FFF17A;
+            --secondary-color: #FFFF00;
+            --tertiary-color: #D0D000;
+            --bg-color: #F5F5F5;
+
+            --font-title: "Fraunces", serif;
+            --font-text: "Open Sans", sans-serif;
+            --font-condensed: "Roboto Condensed", sans-serif;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--bg-color);
+            font-family: var(--font-text);
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            width: 92%;
+            height: 82vh;
+            margin: 5vh auto;
+        }
+
+        .container section:first-child {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        #amarillo1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--primary-color);
+            flex-grow: 1;
+        }
+
+        #amarillo2 {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        #crema {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            background-color: var(--secondary-color);
+            flex-grow: 1;
+        }
+
+        #amarillo3 {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            background-color: var(--secondary-color);
+            flex-grow: 1;
+        }
+
+        .container section:last-child {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: var(--tertiary-color);
+            flex-grow: 1;
+        }
+
+        h1 {
+            font-size: 1em;
+            font-weight: 400;
+        }
+
+        #amarillo1 h1,
+        .container section:last-child h1 {
+            font-family: var(--font-title);
+        }
+
+        #crema h1,
+        #amarillo3 h1 {
+            font-family: var(--font-condensed);
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            .container section:first-child {
+                flex-grow: 1;
+            }
+
+            .container section:last-child {
+                flex-grow: 1;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <section>
+
+            <div id="amarillo1">
+                <h1>RAP</h1>
+            </div>
+
+            <div id="amarillo2">
+
+                <div id="crema">
+                    <h1>DISEÑO</h1>
+                </div>
+
+                <div id="amarillo3">
+                    <h1>DISEÑO</h1>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section>
+    <h1>
+        <a href="https://www.figma.com/design/acFWcxAScpwm3isGB9xtoV/Untitled?node-id=0-1&p=f&t=c9GIb41rUy8wOVND-0">
+            Disseny Figma
+        </a>
+    </h1>
+</section>
+    </div>
+
+</body>
+</html>
